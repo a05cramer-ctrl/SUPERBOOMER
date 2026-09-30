@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SUPER BOOMER — still calls it AI</title>
+<meta name="description" content="They renamed AI to Super Intelligence. He didn't get the memo. He flies at 4 mph.">
+<meta property="og:title" content="SUPER BOOMER — still calls it AI">
+<meta property="og:description" content="the last man on earth still calling it AI. $BOOMER">
+<meta property="og:image" content="og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico"><link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Rubik:wght@500;700;900&display=swap" rel="stylesheet">
+<script src="config.js"></script>
+<style>
+:root{--blue:#019cfd;--ink:#0d1030;--red:#ff2f2f;--gold:#ffc61a;--white:#fff;--sky:#ffb15c}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html,body{overflow-x:clip;background:var(--blue);color:var(--white);font-family:Rubik,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.px{font-family:"Jersey 15",monospace;letter-spacing:.02em}
+#gl{position:fixed;inset:0;z-index:0;image-rendering:pixelated;image-rendering:crisp-edges}
+#gl canvas{width:100%!important;height:100%!important;display:block;image-rendering:pixelated;image-rendering:crisp-edges}
+.ui{position:relative;z-index:2}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 22px;font-family:"Jersey 15";font-size:30px;line-height:1;background:var(--ink);color:#fff;border:4px solid #fff;box-shadow:6px 6px 0 rgba(0,0,0,.45);transition:.1s;image-rendering:pixelated;white-space:nowrap}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:8px 8px 0 rgba(0,0,0,.45)}
+.btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 rgba(0,0,0,.45)}
+.btn.red{background:var(--red)}.btn.gold{background:var(--gold);color:var(--ink)}.btn.wht{background:#fff;color:var(--ink);border-color:var(--ink)}
+.btn.sm{padding:8px 14px;font-size:24px;border-width:3px}
+.top{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:14px 18px;pointer-events:none}
+.top>*{pointer-events:auto}
+.top .brand{font-family:"Jersey 15";font-size:36px;color:#fff;text-shadow:3px 3px 0 var(--ink);display:flex;align-items:center;gap:10px}
+.top .brand img{width:44px;height:44px;border:3px solid var(--ink);image-rendering:pixelated}
+.top .links{display:flex;gap:8px}
+@media(max-width:700px){.top .links .btn.sm:not(.keep){display:none}}
+section{min-height:100vh;display:flex;align-items:center;padding:100px 5vw 40px;position:relative}
+.box{max-width:640px}
+.box.r{margin-left:auto}
+.box.c{margin:0 auto;text-align:center}
+h1{font-family:"Jersey 15";font-size:clamp(72px,15vw,220px);line-height:.8;color:#fff;text-shadow:8px 8px 0 var(--ink),0 0 40px rgba(0,0,0,.25)}
+h2{font-family:"Jersey 15";font-size:clamp(56px,9vw,120px);line-height:.85;color:var(--gold);text-shadow:6px 6px 0 var(--ink)}
+.sub{font-family:"Jersey 15";font-size:clamp(28px,3.4vw,44px);line-height:1;color:#fff;text-shadow:3px 3px 0 var(--ink);margin:10px 0 18px}
+.p{font-size:clamp(16px,1.5vw,19px);line-height:1.45;font-weight:500;background:rgba(13,16,48,.82);padding:12px 14px;border:3px solid #fff;box-shadow:5px 5px 0 rgba(0,0,0,.4);display:inline-block;max-width:560px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.tag{font-family:"Jersey 15";font-size:22px;color:var(--ink);background:var(--gold);padding:4px 10px;border:3px solid var(--ink);display:inline-block;box-shadow:4px 4px 0 var(--ink);margin-bottom:10px}
+/* autocorrect */
+.phone{background:#e8e8e8;color:#111;border:5px solid var(--ink);box-shadow:10px 10px 0 rgba(0,0,0,.45);padding:16px;max-width:520px;margin-top:14px}
+.phone .bar{font-family:"Jersey 15";font-size:22px;display:flex;justify-content:space-between;color:#333;border-bottom:3px solid #bbb;padding-bottom:6px;margin-bottom:10px}
+.phone .msgs{min-height:150px;display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+.phone .m{align-self:flex-end;background:#0a84ff;color:#fff;padding:8px 12px;border-radius:14px 14px 2px 14px;max-width:85%;font-size:16px;animation:pop .25s}
+.phone .m.fix{background:#ddd;color:#111;align-self:flex-start;border-radius:14px 14px 14px 2px;font-family:"Jersey 15";font-size:20px}
+.phone .m s{color:#ffb0b0}
+@keyframes pop{from{transform:scale(.7);opacity:0}}
+.phone form{display:flex;gap:8px}
+.phone input{flex:1;font:inherit;font-size:16px;padding:10px;border:3px solid var(--ink);background:#fff;min-width:0}
+.phone .cnt{font-family:"Jersey 15";font-size:20px;color:#555;margin-top:8px}
+/* powers */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px;max-width:980px}
+.card{background:rgba(13,16,48,.88);border:4px solid #fff;box-shadow:6px 6px 0 rgba(0,0,0,.45);padding:18px;transform:rotate(var(--r,0))}
+.card .k{font-family:"Jersey 15";font-size:22px;color:var(--gold)}
+.card h4{font-family:"Jersey 15";font-size:40px;line-height:.9;margin:6px 0}
+.card p{font-size:15px;line-height:1.4}
+@media(max-width:800px){.cards{grid-template-columns:1fr}}
+/* token */
+.ca{display:flex;gap:10px;align-items:center;background:#fff;color:var(--ink);border:4px solid var(--ink);padding:10px 12px;box-shadow:6px 6px 0 rgba(0,0,0,.45);max-width:640px;width:100%;margin:14px auto 0}
+.ca .k{font-family:"Jersey 15";font-size:26px}
+.ca .v{flex:1;font-family:"Jersey 15";font-size:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left}
+.facts{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.f{font-family:"Jersey 15";font-size:22px;background:var(--ink);border:3px solid #fff;padding:6px 12px}
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;background:#fff;color:var(--ink);border:4px solid var(--ink);padding:8px 16px;font-family:"Jersey 15";font-size:26px;z-index:50;transition:.25s;box-shadow:5px 5px 0 var(--ink)}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+.hint{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);font-family:"Jersey 15";font-size:24px;color:#fff;text-shadow:2px 2px 0 var(--ink);z-index:5;animation:bob 1.2s infinite alternate;pointer-events:none}
+@keyframes bob{to{transform:translate(-50%,6px)}}
+footer{position:relative;z-index:2;text-align:center;padding:30px 5vw 50px;font-family:"Jersey 15";font-size:22px;text-shadow:2px 2px 0 var(--ink)}
+</style>
+</head>
+<body>
+<div id="gl"></div>
+<div class="top">
+  <a class="brand" href="#"><img src="pfp.jpg" alt="">SUPER BOOMER</a>
+  <div class="links">
+    <a class="btn sm wht" href="#ac">autocorrect</a>
+    <a class="btn sm wht" id="xl" href="#" target="_blank" rel="noopener">X</a>
+    <a class="btn sm red keep" id="buyt" href="#" target="_blank" rel="noopener">BUY</a>
+  </div>
+</div>
+<div class="hint" id="hint">▼ scroll</div>
+
+<main class="ui">
+  <section id="s0">
+    <div class="box">
+      <div class="tag">STILL CALLS IT AI</div>
+      <h1>SUPER<br>BOOMER</h1>
+      <p class="sub">they renamed it. he didn't get the memo.</p>
+      <div class="cta">
+        <a class="btn red" id="buy" href="#" target="_blank" rel="noopener">BUY $BOOMER</a>
+        <a class="btn gold" id="chart" href="#" target="_blank" rel="noopener">CHART</a>
+        <button class="btn wht" id="copy">COPY CA</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="s1">
+    <div class="box r">
+      <div class="tag">SEPT 29, 2026</div>
+      <h2>THE WORD IS<br>BANNED.</h2>
+      <p class="p">executive order: "artificial intelligence" is now "super intelligence". federal agencies may no longer acknowledge the old word. every super hero got the memo. one of them read it on a flip phone and said "AI" anyway.</p>
+    </div>
+  </section>
+
+  <section id="ac">
+    <div class="box">
+      <div class="tag">THE AUTOCORRECT</div>
+      <h2>TRY TO<br>SAY IT.</h2>
+      <div class="phone">
+        <div class="bar"><span>◀ Messages</span><span>Super Boomer</span><span>4G</span></div>
+        <div class="msgs" id="msgs"><div class="m fix">type "AI". go on.</div></div>
+        <form id="f"><input id="inp" placeholder="text him something" autocomplete="off" maxlength="80"><button class="btn sm" type="submit">SEND</button></form>
+        <div class="cnt">corrections: <b id="corr">0</b> · slaps: <b id="slaps">0</b></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="s3">
+    <div class="box" style="max-width:980px">
+      <div class="tag">POWERS</div>
+      <h2>SUPER<br>POWERS.</h2>
+      <div class="cards">
+        <div class="card" style="--r:-1deg"><div class="k">01</div><h4>FLIES AT 4 MPH.</h4><p>cape works. knees don't. lands on the lawn every time.</p></div>
+        <div class="card" style="--r:.8deg"><div class="k">02</div><h4>READS THE TERMS.</h4><p>every word. then calls the number. then holds.</p></div>
+        <div class="card" style="--r:-.6deg"><div class="k">03</div><h4>PRINTS THE CA.</h4><p>on paper. keeps it in the glovebox. next to the map.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="token">
+    <div class="box c">
+      <div class="tag">THE COIN</div>
+      <h1 style="font-size:clamp(70px,13vw,170px)">$BOOMER</h1>
+      <p class="sub">the last man on earth still calling it AI.</p>
+      <div class="ca"><span class="k">CA</span><span class="v" id="ca">still on hold with support</span><button class="btn sm" id="copy2">COPY</button></div>
+      <div class="facts"><span class="f">supply 1,000,000,000</span><span class="f">pump.fun</span><span class="f">solana</span><span class="f">memo: unread</span></div>
+      <div class="cta" style="justify-content:center">
+        <a class="btn red" id="buy2" href="#" target="_blank" rel="noopener">BUY ON PUMP.FUN</a>
+        <a class="btn gold" id="chart2" href="#" target="_blank" rel="noopener">CHART</a>
+        <a class="btn wht" id="x2" href="#" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+  </section>
+  <footer>$BOOMER is a memecoin. he is not a real super hero. he is a real boomer.</footer>
+</main>
+<div class="toast" id="toast"></div>
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from 'three';
+const host=document.getElementById('gl');
+const r=new THREE.WebGLRenderer({antialias:false,powerPreference:'high-performance'});
+const PX=.5; // chunky pixels on purpose
+r.setPixelRatio(PX); r.setSize(innerWidth,innerHeight); host.appendChild(r.domElement);
+r.outputColorSpace=THREE.SRGBColorSpace;
+const sc=new THREE.Scene(); sc.fog=new THREE.Fog(0xffb15c,60,260);
+const cam=new THREE.PerspectiveCamera(innerWidth<700?78:48,innerWidth/innerHeight,.1,600);
+
+// sky dome gradient
+{const g=new THREE.SphereGeometry(400,16,12); const col=[]; const p=g.attributes.position;
+ for(let i=0;i<p.count;i++){const y=p.getY(i)/400; const t=Math.max(0,Math.min(1,(y+.2)/1.1)); const c=new THREE.Color().lerpColors(new THREE.Color(0xffb15c),new THREE.Color(0x3aa0ff),Math.pow(t,.8)); col.push(c.r,c.g,c.b);}
+ g.setAttribute('color',new THREE.Float32BufferAttribute(col,3));
+ sc.add(new THREE.Mesh(g,new THREE.MeshBasicMaterial({vertexColors:true,side:THREE.BackSide,fog:false})));}
+// sun
+const sun=new THREE.Mesh(new THREE.CircleGeometry(22,24),new THREE.MeshBasicMaterial({color:0xfff0b0,fog:false})); sun.position.set(-120,60,-300); sc.add(sun);
+sc.add(new THREE.HemisphereLight(0xfff3d6,0x3f7a3a,1.1));
+const dl=new THREE.DirectionalLight(0xffd9a0,1.6); dl.position.set(-40,60,20); sc.add(dl);
+
+// ground + roads
+const ground=new THREE.Mesh(new THREE.PlaneGeometry(700,700),new THREE.MeshLambertMaterial({color:0x62b34a})); ground.rotation.x=-Math.PI/2; sc.add(ground);
+const roadM=new THREE.MeshLambertMaterial({color:0x3b3b44});
+for(let i=-3;i<=3;i++){const rd=new THREE.Mesh(new THREE.PlaneGeometry(700,8),roadM); rd.rotation.x=-Math.PI/2; rd.position.set(0,.02,i*60); sc.add(rd); const rd2=new THREE.Mesh(new THREE.PlaneGeometry(8,700),roadM); rd2.rotation.x=-Math.PI/2; rd2.position.set(i*60,.02,0); sc.add(rd2);}
+// houses
+const pal=[0xf7e4c3,0xe9c7a5,0xd8e6f2,0xf2d1d1,0xe6f0c8,0xfff2b3];
+const roofs=[0xb5423a,0x6b4a3a,0x3f5f8f,0x8a5a3a];
+const boxG=new THREE.BoxGeometry(1,1,1), coneG=new THREE.ConeGeometry(.8,.6,4);
+let seed=7; const rnd=()=>{seed=(seed*9301+49297)%233280;return seed/233280;};
+const houses=new THREE.Group(); sc.add(houses);
+for(let gx=-3;gx<3;gx++)for(let gz=-3;gz<3;gz++){for(let k=0;k<5;k++){const x=gx*60+12+rnd()*36, z=gz*60+12+rnd()*36; const w=6+rnd()*6,d=6+rnd()*6,h=4+rnd()*5;
+ const m=new THREE.Mesh(boxG,new THREE.MeshLambertMaterial({color:pal[Math.floor(rnd()*pal.length)]})); m.scale.set(w,h,d); m.position.set(x,h/2,z); houses.add(m);
+ const rf=new THREE.Mesh(coneG,new THREE.MeshLambertMaterial({color:roofs[Math.floor(rnd()*roofs.length)],flatShading:true})); rf.scale.set(w*1.1,3.5,d*1.1); rf.position.set(x,h+1.6,z); rf.rotation.y=Math.PI/4; houses.add(rf);
+ if(rnd()<.7){const t=new THREE.Mesh(new THREE.ConeGeometry(2.2,6,6),new THREE.MeshLambertMaterial({color:0x2f8f3a,flatShading:true})); t.position.set(x+w/2+3+rnd()*4,3,z+rnd()*8-4); houses.add(t); const tr=new THREE.Mesh(new THREE.CylinderGeometry(.4,.5,2,5),new THREE.MeshLambertMaterial({color:0x6b4a2a})); tr.position.set(t.position.x,1,t.position.z); houses.add(tr);}
+}}
+// clouds
+const clouds=[]; for(let i=0;i<18;i++){const g=new THREE.Group(); for(let k=0;k<4;k++){const s=new THREE.Mesh(new THREE.SphereGeometry(3+rnd()*4,7,5),new THREE.MeshLambertMaterial({color:0xffffff,flatShading:true})); s.position.set(k*4-6,rnd()*2,rnd()*3); g.add(s);} g.position.set(rnd()*400-200,40+rnd()*30,rnd()*400-200); sc.add(g); clouds.push(g);}
+// billboard
+const bbC=document.createElement('canvas'); bbC.width=512; bbC.height=256; const bx=bbC.getContext('2d');
+let spray=0; function drawBB(){bx.fillStyle='#f5f1e6'; bx.fillRect(0,0,512,256); bx.fillStyle='#0d1030'; bx.font='bold 46px Rubik, sans-serif'; bx.textAlign='center'; bx.fillText('SUPER',256,100); bx.fillText('INTELLIGENCE',256,160); bx.font='22px Rubik, sans-serif'; bx.fillText('by executive order',256,215);
+ if(spray>0){bx.save(); bx.globalAlpha=Math.min(1,spray); bx.strokeStyle='#ff2f2f'; bx.lineWidth=14; bx.lineCap='round'; bx.beginPath(); bx.moveTo(80,200); bx.lineTo(430,60); bx.moveTo(80,60); bx.lineTo(430,200); bx.stroke(); bx.fillStyle='#ff2f2f'; bx.font='bold 150px Rubik, sans-serif'; bx.translate(256,150); bx.rotate(-.12); bx.fillText('AI',0,50); bx.restore();}
+ bbT.needsUpdate=true;}
+const bbT=new THREE.CanvasTexture(bbC); bbT.magFilter=THREE.NearestFilter;
+const bb=new THREE.Group(); const bbm=new THREE.Mesh(new THREE.PlaneGeometry(40,20),new THREE.MeshBasicMaterial({map:bbT})); bbm.position.y=24; bb.add(bbm);
+const bbf=new THREE.Mesh(new THREE.BoxGeometry(42,22,1),new THREE.MeshLambertMaterial({color:0x222233})); bbf.position.set(0,24,-.6); bb.add(bbf);
+[-14,14].forEach(x=>{const p=new THREE.Mesh(new THREE.CylinderGeometry(.8,.8,14,6),new THREE.MeshLambertMaterial({color:0x444455})); p.position.set(x,7,0); bb.add(p);});
+bb.position.set(70,0,-30); bb.rotation.y=-.6; sc.add(bb); drawBB();
+
+// the boomer (pixel sprite billboard)
+const loader=new THREE.TextureLoader(); const mk=t=>{t.magFilter=THREE.NearestFilter;t.minFilter=THREE.NearestFilter;t.colorSpace=THREE.SRGBColorSpace;return t;};
+const texStand=mk(loader.load('boomer.png')), texFly=mk(loader.load('fly.png',undefined,undefined,()=>{}));
+const spm=new THREE.SpriteMaterial({map:texStand,transparent:true,alphaTest:.3});
+const him=new THREE.Sprite(spm); him.scale.set(14,14,1); sc.add(him);
+// speed lines
+const lines=[]; for(let i=0;i<14;i++){const l=new THREE.Mesh(new THREE.BoxGeometry(6,.25,.25),new THREE.MeshBasicMaterial({color:0xffffff,transparent:true,opacity:.7})); l.visible=false; sc.add(l); lines.push(l);}
+// shadow blob
+const shadow=new THREE.Mesh(new THREE.CircleGeometry(4,12),new THREE.MeshBasicMaterial({color:0x000000,transparent:true,opacity:.25})); shadow.rotation.x=-Math.PI/2; shadow.position.y=.05; sc.add(shadow);
+
+// keyframes per section: camera pos, lookAt, boomer pos, pose
+const V=(x,y,z)=>new THREE.Vector3(x,y,z);
+const K=[
+ {c:V(-4,15,36),l:V(10,12,0),b:V(28,13,-2),pose:'stand'},
+ {c:V(34,24,26),l:V(66,22,-30),b:V(22,20,-8),pose:'fly'},
+ {c:V(-30,12,26),l:V(-38,10,8),b:V(-31,9,8),pose:'stand'},
+ {c:V(10,60,90),l:V(0,20,-40),b:V(-24,36,-24),pose:'fly'},
+ {c:V(0,30,110),l:V(0,18,0),b:V(-40,14,30),pose:'stand'},
+];
+const secs=['s0','s1','ac','s3','token'].map(id=>document.getElementById(id));
+const sm=t=>t*t*(3-2*t);
+let prog=0, bob=0, shakeT=0;
+function progress(){const y=scrollY; for(let i=0;i<secs.length-1;i++){const a=secs[i].offsetTop,b=secs[i+1].offsetTop; if(y<b){return i+sm(Math.max(0,Math.min(1,(y-a)/(b-a))));}} return secs.length-1;}
+const cp=new THREE.Vector3(),cl=new THREE.Vector3(),bp=new THREE.Vector3();
+window.__slap=()=>{shakeT=performance.now();};
+function loop(){
+  const t=performance.now()/1000; const p=progress(); const i=Math.min(K.length-2,Math.floor(p)), f=p-i; const A=K[i],B=K[Math.min(K.length-1,i+1)];
+  cp.lerpVectors(A.c,B.c,f); cl.lerpVectors(A.l,B.l,f); bp.lerpVectors(A.b,B.b,f);
+  cam.position.lerp(cp,.08); cam.lookAt(cl);
+  const flying=(f>.15&&f<.85)||(B.pose==='fly'&&f>=.5)||(A.pose==='fly'&&f<.5);
+  spm.map=flying&&texFly.image?texFly:texStand; spm.needsUpdate=true;
+  const dir=(B.b.x-A.b.x)<0?-1:1; him.scale.x=14*(flying?dir:1);
+  him.position.set(bp.x,bp.y+Math.sin(t*2.2)*.6,bp.z); him.material.rotation=flying?dir*-.12:Math.sin(t*3)*.04;
+  if(shakeT&&performance.now()-shakeT<400){him.position.x+=Math.sin(t*90)*.8; him.material.rotation+=Math.sin(t*70)*.15;}
+  shadow.position.set(him.position.x,.05,him.position.z); shadow.scale.setScalar(Math.max(.4,1.4-him.position.y/40));
+  lines.forEach((l,k)=>{l.visible=flying; if(flying){l.position.set(him.position.x-dir*(8+k*2.2+((t*40+k*7)%18)),him.position.y+(k%5-2)*1.6,him.position.z+(k%3-1)*1.2); l.material.opacity=.15+((k*7+t*3)%1)*.5;}});
+  clouds.forEach((c,k)=>{c.position.x+=.02+k*.002; if(c.position.x>220)c.position.x=-220;});
+  const want=p>0.55&&p<1.7?Math.min(1,(p-0.55)/.5):0; if(Math.abs(want-spray)>.01){spray+=(want-spray)*.08; drawBB();}
+  bb.lookAt(cam.position.x,24,cam.position.z);
+  document.getElementById('hint').style.opacity=scrollY>80?0:1;
+  r.render(sc,cam); requestAnimationFrame(loop);
+}
+loop();
+addEventListener('resize',()=>{r.setSize(innerWidth,innerHeight);cam.aspect=innerWidth/innerHeight;cam.fov=innerWidth<700?78:48;cam.updateProjectionMatrix();});
+</script>
+
+<script>
+(function(){
+  const C=window.BOOMER_CFG||{},ca=(C.CA||'').trim();
+  const buy=C.BUY||(ca?'https://pump.fun/coin/'+ca:'https://pump.fun'),chart=C.CHART||(ca?'https://gmgn.ai/sol/token/'+ca:'https://gmgn.ai'),x=C.X||'#';
+  const set=(i,h)=>{const e=document.getElementById(i);if(e)e.href=h;};
+  ['buy','buy2','buyt'].forEach(i=>set(i,buy));['chart','chart2'].forEach(i=>set(i,chart));['xl','x2'].forEach(i=>set(i,x));
+  if(ca)document.getElementById('ca').textContent=ca;
+  const toast=document.getElementById('toast');let tt;const say=s=>{toast.textContent=s;toast.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>toast.classList.remove('on'),1500);};
+  const copy=()=>{if(!ca){say('still on hold with support.');return;}navigator.clipboard?.writeText(ca).then(()=>say('copied. he printed it too.'));};
+  document.getElementById('copy').onclick=copy;document.getElementById('copy2').onclick=copy;
+
+  // autocorrect
+  let AC; function slapSound(){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain(),n=AC.createBufferSource();const buf=AC.createBuffer(1,AC.sampleRate*.12,AC.sampleRate);const d=buf.getChannelData(0);for(let i=0;i<d.length;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,3);n.buffer=buf;const gn=AC.createGain();gn.gain.value=.6;n.connect(gn).connect(AC.destination);n.start();o.type='square';o.frequency.setValueAtTime(220,AC.currentTime);o.frequency.exponentialRampToValueAtTime(60,AC.currentTime+.12);g.gain.setValueAtTime(.25,AC.currentTime);g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+.14);o.connect(g).connect(AC.destination);o.start();o.stop(AC.currentTime+.15);}catch(e){}}
+  const msgs=document.getElementById('msgs'),corr=document.getElementById('corr'),slaps=document.getElementById('slaps');let nc=0,ns=0;
+  const replies=['it’s SUPER INTELLIGENCE now. read the memo.','say it again. i dare you.','*slap* super. intelligence.','who taught you that word','i have a flip phone and i still know better','corrected. you’re welcome.'];
+  document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const inp=document.getElementById('inp');const v=inp.value.trim();if(!v)return;inp.value='';
+    const m=document.createElement('div');m.className='m';
+    const hits=(v.match(/\b(a\.?i\.?|artificial intelligence)\b/gi)||[]).length;
+    if(hits){m.innerHTML=v.replace(/\b(a\.?i\.?|artificial intelligence)\b/gi,s=>'<s>'+s.replace(/</g,'&lt;')+'</s> SUPER INTELLIGENCE');nc+=hits;ns++;corr.textContent=nc;slaps.textContent=ns;slapSound();window.__slap&&window.__slap();}
+    else{m.textContent=v;}
+    msgs.appendChild(m);
+    const f=document.createElement('div');f.className='m fix';f.textContent=hits?replies[ns%replies.length]:['ok.','not the word. good.','you learn.','fine.'][Math.floor(Math.random()*4)];setTimeout(()=>{msgs.appendChild(f);msgs.scrollTop=1e6;},350);
+    while(msgs.children.length>8)msgs.removeChild(msgs.firstChild);
+  });
+})();
+</script>
+</body>
+</html>
